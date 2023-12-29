@@ -1,4 +1,5 @@
 pub mod cell;
+pub mod refcell;
 
 #[cfg(test)]
 mod tests {

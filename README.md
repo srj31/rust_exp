@@ -8,6 +8,9 @@ Repo for diving in deeper into what happens in Rust beyond rustlings.
 
 [std::Cell](https://doc.rust-lang.org/std/cell/struct.Cell.html)
 
+
+#### `Cell<T>`
+
 Allow for multiple references that can be mutated even with aliasing. `Cell<T>`
 with `RefCell<T>` and `OnceCell<T>` provides interior mutability, i.e. mutate
 with `(&T)` instead of what other data types do with inherited mutability (`&mut T`).
@@ -26,3 +29,8 @@ Cell to get the reference. this prevents dangling references or dirty reads.
 `Cell` does not implement `Sync` therefore its reference cannot be given to another thread.
 
 `Cell` is generally used with small copy types
+
+
+#### `RefCell<T>`
+
+Borrow rules are checked dynamically
